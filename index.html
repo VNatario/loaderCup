@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loader</title>
+
+    <style>
+      body {
+        background-color: black;
+      }
+
+      @keyframes load {
+        0% {
+          box-shadow: 0 0 #ed3b65 inset;
+        }
+        100% {
+          box-shadow: 0 -70px #ed3b65 inset;
+        }
+      }
+
+      .loader {
+        transform: perspective(140px) rotateX(-45deg);
+
+        width: 32px;
+        height: 72px;
+        position: relative;
+        border: 2px solid white;
+        animation: load 1.5s linear infinite alternate;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader"></div>
+  </body>
+</html>
